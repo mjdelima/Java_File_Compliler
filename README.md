@@ -1,4 +1,4 @@
-# Java_File_Compliler
+# Java File Compliler
 A simple tool to compile a Java file.
 
 
