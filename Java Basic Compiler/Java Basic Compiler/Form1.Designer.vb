@@ -32,7 +32,7 @@ Partial Class Form1
         'ckRemove
         '
         Me.ckRemove.AutoSize = True
-        Me.ckRemove.Location = New System.Drawing.Point(26, 154)
+        Me.ckRemove.Location = New System.Drawing.Point(24, 88)
         Me.ckRemove.Margin = New System.Windows.Forms.Padding(4)
         Me.ckRemove.Name = "ckRemove"
         Me.ckRemove.Size = New System.Drawing.Size(153, 22)
@@ -43,7 +43,7 @@ Partial Class Form1
         'btnCompileOnly
         '
         Me.btnCompileOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCompileOnly.Location = New System.Drawing.Point(26, 209)
+        Me.btnCompileOnly.Location = New System.Drawing.Point(26, 123)
         Me.btnCompileOnly.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.btnCompileOnly.Name = "btnCompileOnly"
         Me.btnCompileOnly.Size = New System.Drawing.Size(180, 42)
@@ -58,13 +58,13 @@ Partial Class Form1
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(374, 127)
+        Me.TextBox1.Size = New System.Drawing.Size(374, 61)
         Me.TextBox1.TabIndex = 8
         '
         'btnRun
         '
         Me.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRun.Location = New System.Drawing.Point(218, 209)
+        Me.btnRun.Location = New System.Drawing.Point(218, 123)
         Me.btnRun.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.btnRun.Name = "btnRun"
         Me.btnRun.Size = New System.Drawing.Size(180, 42)
@@ -75,7 +75,7 @@ Partial Class Form1
         'btnCompileRun
         '
         Me.btnCompileRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCompileRun.Location = New System.Drawing.Point(26, 265)
+        Me.btnCompileRun.Location = New System.Drawing.Point(26, 179)
         Me.btnCompileRun.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.btnCompileRun.Name = "btnCompileRun"
         Me.btnCompileRun.Size = New System.Drawing.Size(372, 42)
@@ -88,7 +88,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(429, 325)
+        Me.ClientSize = New System.Drawing.Size(429, 240)
         Me.Controls.Add(Me.ckRemove)
         Me.Controls.Add(Me.btnCompileOnly)
         Me.Controls.Add(Me.TextBox1)

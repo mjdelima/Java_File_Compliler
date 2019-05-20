@@ -1,6 +1,8 @@
 ﻿Imports System.IO.Path
 
 Public Class Form1
+    Dim file_location As String = ""
+    Dim file As String = ""
 
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.AllowDrop = True
@@ -11,12 +13,12 @@ Public Class Form1
 
         Dim temp As String = ""
         For Each path In files
-            temp = path
-            TextBox1.Text = temp
+
+            file_location = GetDirectoryName(path)
+            file = GetFileNameWithoutExtension(path)
+            TextBox1.Text = path
 
         Next
-
-        'MessageBox.Show(GetDirectoryName(TextBox1.Text))
 
     End Sub
 
@@ -32,7 +34,7 @@ Public Class Form1
                 removePackage()
 
             End If
-            RunCMDCom("javac " + Chr(34) + TextBox1.Text + Chr(34) + " && cd " + GetDirectoryName(TextBox1.Text) + " && java " + GetFileNameWithoutExtension(TextBox1.Text) + " && pause && exit", "/W", True)
+            RunCMDCom("cd " + Chr(34) + file_location + Chr(34) + " && " + "javac " + file + ".java && java " + file + " && pause && exit", "/W", True)
             'RunCMDCom("cd " + GetDirectoryName(TextBox1.Text) + "&& java " + GetFileNameWithoutExtension(TextBox1.Text) + " && pause && exit", "/W", True)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -49,7 +51,7 @@ Public Class Form1
     End Sub
 
     Private Sub BtnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
-        RunCMDCom("cd " + GetDirectoryName(TextBox1.Text) + "&& java " + GetFileNameWithoutExtension(TextBox1.Text) + " && pause && exit", "/W", True)
+        RunCMDCom("cd " + Chr(34) + file_location + Chr(34) + " &&  java " + Chr(34) + file + Chr(34) + " && pause && exit", "/W", True)
 
     End Sub
 
@@ -72,7 +74,7 @@ Public Class Form1
                 removePackage()
 
             End If
-            RunCMDCom("javac " + Chr(34) + TextBox1.Text + Chr(34) + " && exit", "/W", True)
+            RunCMDCom("cd " + Chr(34) + file_location + Chr(34) + " &&  javac " + Chr(34) + file + ".java" + Chr(34) + " && exit", "/W", True)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
